@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista de lista -->
+    <record id="hola_mundo_prueba_list" model="ir.ui.view">
+        <field name="name">hola_mundo.prueba.list</field>
+        <field name="model">hola_mundo.prueba</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="quantitat"/>
+                <field name="preu"/>
+                <field name="actiu"/>
+                <field name="data"/>
+                <field name="estat"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista de formulario -->
+    <record id="hola_mundo_prueba_form" model="ir.ui.view">
+        <field name="name">hola_mundo.prueba.form</field>
+        <field name="model">hola_mundo.prueba</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="imatge" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="quantitat"/>
+                            <field name="preu"/>
+                            <field name="actiu"/>
+                            <field name="estat"/>
+                        </group>
+                        <group>
+                            <field name="data"/>
+                            <field name="data_hora"/>
+                            <field name="fitxer"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="descripcio"/>
+                        <field name="contingut"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción de ventana -->
+    <record id="hola_mundo_prueba_action" model="ir.actions.act_window">
+        <field name="name">Pruebas</field>
+        <field name="res_model">hola_mundo.prueba</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menús -->
+    <menuitem id="hola_mundo_menu_root" name="Hola Mundo"/>
+    <menuitem id="hola_mundo_menu_pruebas" name="Pruebas"
+              parent="hola_mundo_menu_root" action="hola_mundo_prueba_action"/>
+</odoo>

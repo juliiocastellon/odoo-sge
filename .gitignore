@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Dades de PostgreSQL i Odoo (si es mapegen localment)
+data/
+filestore/
+sessions/
+postgresql/
+
+# Editors i sistema
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets
+.env
